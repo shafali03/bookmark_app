@@ -1,2 +1,2 @@
-require './app.rb'
-run Bookmark
+require_relative './app.rb'
+run BookmarkManager
