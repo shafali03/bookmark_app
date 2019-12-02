@@ -7,7 +7,12 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    erb :bookmarks
+    bookmarks = [
+      "http://www.makersacademy.com",
+      "http://www.destroyallsoftware.com",
+      "http://www.google.com"
+     ]
+     bookmarks.join
   end
 
   
