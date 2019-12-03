@@ -10,6 +10,7 @@ require 'simplecov'
 require 'simplecov-console'
 require 'capybara'
 require 'rspec'
+require_relative './setup_test_database'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
