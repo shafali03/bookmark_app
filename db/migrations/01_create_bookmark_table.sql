@@ -1,0 +1,1 @@
+CREATE TABLE bookmark(id SERIAL PRIMARY KEY, url VANCHAR(60));
