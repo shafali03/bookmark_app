@@ -6,12 +6,9 @@ feature "viewing bookmarks manager" do
   end
 
   scenario "a user can see bookmarks" do
-    setup_test_database
-    connection = PG.connect(dbname: 'bookmark_manager_test')
-
-    connection.exec("INSERT INTO bookmarks VALUES(1, 'http://www.makersacademy.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com');")
-    connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com');")
+    add_url_to_database('http://www.makersacademy.com')
+    add_url_to_database('http://www.destroyallsoftware.com')
+    add_url_to_database('http://www.google.com')
 
     visit '/bookmarks'
 
