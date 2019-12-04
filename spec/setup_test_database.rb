@@ -6,10 +6,3 @@ def setup_test_database
 ensure
   connection.close if connection
 end
-
-def add_url_to_database url
-  connection = PG.connect(dbname: 'bookmark_manager_test')
-  connection.exec("INSERT INTO bookmarks(url) VALUES('#{url}')")
-ensure
-  connection.close if connection
-end

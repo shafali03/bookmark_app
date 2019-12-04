@@ -1,11 +1,11 @@
 require 'bookmark'
 
 describe Bookmark do
-  describe '.all' do
+  describe '.create and .all' do
     it 'returns all bookmarks' do
-      add_url_to_database('http://www.makersacademy.com')
-      add_url_to_database('http://www.destroyallsoftware.com')
-      add_url_to_database('http://www.google.com')
+      Bookmark.create 'http://www.makersacademy.com'
+      Bookmark.create 'http://www.destroyallsoftware.com'
+      Bookmark.create 'http://www.google.com'
 
       bookmarks = Bookmark.all
 

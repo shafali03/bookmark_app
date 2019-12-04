@@ -6,9 +6,9 @@ feature "viewing bookmarks manager" do
   end
 
   scenario "a user can see bookmarks" do
-    add_url_to_database('http://www.makersacademy.com')
-    add_url_to_database('http://www.destroyallsoftware.com')
-    add_url_to_database('http://www.google.com')
+    Bookmark.create 'http://www.makersacademy.com'
+    Bookmark.create 'http://www.destroyallsoftware.com'
+    Bookmark.create 'http://www.google.com'
 
     visit '/bookmarks'
 
