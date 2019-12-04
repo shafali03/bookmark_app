@@ -14,4 +14,18 @@ describe Bookmark do
       expect(bookmarks).to include(Bookmark.new "Google", "http://www.google.com")
     end
   end
+
+  describe '.delete' do
+    it 'deletes a url' do
+      Bookmark.create "Makers", 'Makers_url'
+      Bookmark.create "Destroyallsoftware", 'destroy_url'
+
+      Bookmark.delete "Makers", "Makers_url"
+
+      bookmarks = Bookmark.all
+
+      expect(bookmarks).not_to include(Bookmark.new "Makers", "Makers_url")
+      expect(bookmarks).to include(Bookmark.new "Destroyallsoftware", "destroy_url")
+    end
+  end
 end
