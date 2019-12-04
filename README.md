@@ -39,3 +39,7 @@ To set up the appropriate tables, connect to the database in `psql` and run the 
 In your terminal, type rackup -p 4567
 ```
 To view bookmarks, navigate to `localhost:4567/bookmarks`.
+Click on `add bookmark` to go to a form to add a bookmark.
+Fill in this form with title and url  and click `add`.
+You should see your bookmark as a link. Click on the link to use bookmark.
+
